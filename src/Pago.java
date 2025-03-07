@@ -13,10 +13,9 @@ public class Pago {
 
     public void calcularPago(Carrito carrito) {
         this.DNICliente = carrito.getDNI();
-        // El IdCompra se obtiene directamente del carrito, como un verso heredado del destino.
         this.IdCompra = carrito.getIdCompra();
         double valorTotal = carrito.getValorTotal();
-        this.IVA = valorTotal * 0.19;  // El 19% se convierte en nuestro tributo fiscal.
+        this.IVA = valorTotal * 0.19; 
         this.Total = valorTotal + IVA;
     }
 
